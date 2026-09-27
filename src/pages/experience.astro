@@ -1,0 +1,723 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Experience | Daniela Chanta"
+  description="Professional and research experience of Daniela Chanta across AI engineering, data systems, IoT, machine learning and applied research."
+>
+  <Navbar />
+
+  <main>
+
+    <!-- HEADER -->
+
+    <section
+      class="mx-auto max-w-6xl px-6 pb-20 pt-40 lg:px-8"
+    >
+
+      <p
+        class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+      >
+        Experience
+      </p>
+
+      <h1
+        class="mt-5 max-w-4xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl"
+      >
+        Building data-driven systems across AI, IoT and engineering.
+      </h1>
+
+      <p
+        class="mt-7 max-w-3xl text-lg leading-8 text-slate-600"
+      >
+        My experience spans applied AI, real-time data systems,
+        building automation, computer vision and academic research,
+        combining engineering context with computational methods.
+      </p>
+
+    </section>
+
+
+    <!-- ALSI -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[260px_1fr]">
+
+        <!-- COMPANY -->
+
+        <aside>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            ALSI Perú
+          </p>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Lima / Remote, Peru
+          </p>
+
+          <p class="mt-6 max-w-xs text-sm leading-7 text-slate-600">
+            Engineering and technology company working on building
+            automation, IoT and internal digital systems.
+          </p>
+
+        </aside>
+
+
+        <!-- ROLES -->
+
+        <div class="divide-y divide-slate-200">
+
+          <!-- AI AUTOMATION CONSULTANT -->
+
+          <article class="pb-12">
+
+            <div
+              class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+            >
+
+              <div>
+
+                <p class="text-sm text-slate-400">
+                  Jul 2026
+                </p>
+
+                <h2
+                  class="mt-2 text-2xl font-semibold tracking-tight text-slate-950"
+                >
+                  AI Automation Consultant
+                </h2>
+
+              </div>
+
+              <span
+                class="w-fit rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+              >
+                AI Engineering
+              </span>
+
+            </div>
+
+
+            <p class="mt-6 max-w-3xl leading-8 text-slate-600">
+              Developed an AI-powered automation layer connecting
+              natural-language interaction with internal business workflows
+              across Zoho Creator and Zoho Cliq.
+            </p>
+
+
+            <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-600">
+
+              <li>
+                • Built a Python and FastAPI backend integrating the OpenAI API
+                with Zoho workflows.
+              </li>
+
+              <li>
+                • Developed a conversational assistant for Commercial 3.0,
+                allowing users to create and assign commercial sources using
+                natural-language commands.
+              </li>
+
+              <li>
+                • Added confirmation steps before executing business actions
+                to reduce unintended modifications.
+              </li>
+
+              <li>
+                • Implemented AI-assisted validation and structured response
+                generation for the Rendiciones 2.0 expense-management workflow.
+              </li>
+
+              <li>
+                • Deployed the backend on Microsoft Azure and connected it to
+                internal applications through APIs.
+              </li>
+
+            </ul>
+
+
+            <div class="mt-7 flex flex-wrap gap-2">
+
+              {
+                [
+                  "Python",
+                  "FastAPI",
+                  "OpenAI API",
+                  "Azure",
+                  "Zoho Creator",
+                  "Zoho Cliq",
+                  "REST APIs",
+                ].map((tech) => (
+                  <span
+                    class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+                  >
+                    {tech}
+                  </span>
+                ))
+              }
+
+            </div>
+
+
+            <a
+              href="/projects/ai-automation"
+              class="mt-7 inline-flex text-sm font-medium text-slate-900"
+            >
+              View related project →
+            </a>
+
+          </article>
+
+
+          <!-- APPLICATION ENGINEER -->
+
+          <article class="py-12">
+
+            <div
+              class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+            >
+
+              <div>
+
+                <p class="text-sm text-slate-400">
+                  Jan 2025 – Jul 2025
+                </p>
+
+                <h2
+                  class="mt-2 text-2xl font-semibold tracking-tight text-slate-950"
+                >
+                  Application Engineer
+                </h2>
+
+              </div>
+
+              <span
+                class="w-fit rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+              >
+                IoT · Data Systems
+              </span>
+
+            </div>
+
+
+            <p class="mt-6 max-w-3xl leading-8 text-slate-600">
+              Developed data-driven monitoring and control solutions for HVAC
+              systems using occupancy, temperature and energy measurements.
+            </p>
+
+
+            <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-600">
+
+              <li>
+                • Built real-time data pipelines using Python, MQTT,
+                Node-RED and Azure SQL.
+              </li>
+
+              <li>
+                • Integrated occupancy, environmental and energy data into
+                building monitoring workflows.
+              </li>
+
+              <li>
+                • Implemented occupancy- and temperature-based HVAC control
+                strategies for commercial and healthcare environments.
+              </li>
+
+              <li>
+                • Analyzed historical energy and operational data to evaluate
+                HVAC behavior and energy-saving opportunities.
+              </li>
+
+            </ul>
+
+
+            <div class="mt-7 flex flex-wrap gap-2">
+
+              {
+                [
+                  "Python",
+                  "MQTT",
+                  "Node-RED",
+                  "Azure SQL",
+                  "IoT",
+                  "Energy Data",
+                ].map((tech) => (
+                  <span
+                    class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+                  >
+                    {tech}
+                  </span>
+                ))
+              }
+
+            </div>
+
+
+            <a
+              href="/projects/hvac-iot"
+              class="mt-7 inline-flex text-sm font-medium text-slate-900"
+            >
+              View related project →
+            </a>
+
+          </article>
+
+
+          <!-- INTERN -->
+
+          <article class="pt-12">
+
+            <div
+              class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+            >
+
+              <div>
+
+                <p class="text-sm text-slate-400">
+                  Nov 2023 – Dec 2024
+                </p>
+
+                <h2
+                  class="mt-2 text-2xl font-semibold tracking-tight text-slate-950"
+                >
+                  Building Automation Engineering Intern
+                </h2>
+
+              </div>
+
+              <span
+                class="w-fit rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+              >
+                Building Automation
+              </span>
+
+            </div>
+
+
+            <p class="mt-6 max-w-3xl leading-8 text-slate-600">
+              Worked on IoT integration and internal applications for
+              real-time monitoring of building systems.
+            </p>
+
+
+            <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-600">
+
+              <li>
+                • Integrated BLE environmental sensors with Azure-based
+                monitoring systems.
+              </li>
+
+              <li>
+                • Developed internal cross-platform applications using
+                Zoho Creator.
+              </li>
+
+              <li>
+                • Contributed to an IoT-based energy-efficiency project
+                for real-time monitoring and HVAC control.
+              </li>
+
+            </ul>
+
+
+            <div class="mt-7 flex flex-wrap gap-2">
+
+              {
+                [
+                  "BLE",
+                  "IoT",
+                  "Azure",
+                  "Zoho Creator",
+                  "Building Automation",
+                ].map((tech) => (
+                  <span
+                    class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+                  >
+                    {tech}
+                  </span>
+                ))
+              }
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- UNIVERSITY OF ALBERTA -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[260px_1fr]">
+
+        <aside>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            University of Alberta
+          </p>
+
+          <p class="mt-3 text-sm text-slate-500">
+            Edmonton, Canada
+          </p>
+
+          <p class="mt-6 max-w-xs text-sm leading-7 text-slate-600">
+            University of Alberta Research Experience.
+          </p>
+
+        </aside>
+
+
+        <article>
+
+          <div
+            class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+          >
+
+            <div>
+
+              <p class="text-sm text-slate-400">
+                Feb 2024 – May 2024
+              </p>
+
+              <h2
+                class="mt-2 text-2xl font-semibold tracking-tight text-slate-950"
+              >
+                Research Intern / Developer
+              </h2>
+
+            </div>
+
+            <span
+              class="w-fit rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+            >
+              Research
+            </span>
+
+          </div>
+
+
+          <p class="mt-6 max-w-3xl leading-8 text-slate-600">
+            Developed Python engineering applications and worked on
+            computer-vision and optimization methods for rooftop photovoltaic
+            analysis.
+          </p>
+
+
+          <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-600">
+
+            <li>
+              • Developed interactive Python applications on the MecSimCalc
+              platform for engineering education.
+            </li>
+
+            <li>
+              • Built a computer-vision pipeline for rooftop analysis using
+              OpenCV and scikit-image.
+            </li>
+
+            <li>
+              • Processed building geometry and imagery to estimate feasible
+              photovoltaic panel placement and orientation.
+            </li>
+
+            <li>
+              • Connected geometric analysis with optimization and expected
+              energy-production estimation.
+            </li>
+
+          </ul>
+
+
+          <div class="mt-7 flex flex-wrap gap-2">
+
+            {
+              [
+                "Python",
+                "OpenCV",
+                "scikit-image",
+                "Optimization",
+                "MecSimCalc",
+              ].map((tech) => (
+                <span
+                  class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+                >
+                  {tech}
+                </span>
+              ))
+            }
+
+          </div>
+
+
+          <a
+            href="/projects/solar-optimization"
+            class="mt-7 inline-flex text-sm font-medium text-slate-900"
+          >
+            View related project →
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- SMART CITY LAB -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[260px_1fr]">
+
+        <aside>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Smart City Laboratory
+          </p>
+
+          <p class="mt-3 text-sm text-slate-500">
+            Universidad Nacional de Ingeniería
+          </p>
+
+          <p class="mt-2 text-sm text-slate-500">
+            Lima, Peru
+          </p>
+
+        </aside>
+
+
+        <article>
+
+          <div
+            class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+          >
+
+            <div>
+
+              <p class="text-sm text-slate-400">
+                Apr 2023 – Dec 2023
+              </p>
+
+              <h2
+                class="mt-2 text-2xl font-semibold tracking-tight text-slate-950"
+              >
+                Researcher
+              </h2>
+
+            </div>
+
+            <span
+              class="w-fit rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+            >
+              Research · Robotics
+            </span>
+
+          </div>
+
+
+          <p class="mt-6 max-w-3xl leading-8 text-slate-600">
+            Worked on computer-vision and brain–machine interface prototypes
+            for mobile robotics applications.
+          </p>
+
+
+          <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-600">
+
+            <li>
+              • Developed a motion-direction detection system for a mobile
+              robot using ORB feature detection and Lucas–Kanade optical flow.
+            </li>
+
+            <li>
+              • Implemented computer-vision processing in Python for robot
+              motion estimation.
+            </li>
+
+            <li>
+              • Developed a brain–machine interface prototype for controlling
+              a 2-DoF mobile robot using EEG signals.
+            </li>
+
+          </ul>
+
+
+          <div class="mt-7 flex flex-wrap gap-2">
+
+            {
+              [
+                "Python",
+                "OpenCV",
+                "Optical Flow",
+                "ORB",
+                "EEG",
+                "Robotics",
+              ].map((tech) => (
+                <span
+                  class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+                >
+                  {tech}
+                </span>
+              ))
+            }
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE SUMMARY -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Across These Roles
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          A progression from physical systems to data and AI.
+        </h2>
+
+        <p class="mt-6 leading-8 text-slate-600">
+          These experiences gradually moved from sensing and automation toward
+          data pipelines, machine learning and AI-enabled systems, while
+          retaining a strong connection with real-world engineering problems.
+        </p>
+
+      </div>
+
+
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            01
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Physical systems
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Sensors, robotics, HVAC systems and building automation.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            02
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Data systems
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Real-time pipelines, MQTT, cloud storage and operational data
+            analysis.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            03
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Applied AI
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Machine learning, computer vision and AI-powered business
+            automation.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div
+        class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between"
+      >
+
+        <div>
+
+          <p
+            class="text-sm uppercase tracking-[0.18em] text-slate-400"
+          >
+            Selected Work
+          </p>
+
+          <h2
+            class="mt-3 text-2xl font-semibold text-slate-950"
+          >
+            See how these experiences translated into projects.
+          </h2>
+
+        </div>
+
+
+        <a
+          href="/projects"
+          class="text-sm font-medium text-slate-900"
+        >
+          View projects →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+
+</BaseLayout>

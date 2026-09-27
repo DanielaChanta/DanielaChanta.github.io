@@ -1,17 +1,448 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 
+import { projects } from "../data/projects";
+
+const featuredProjects = projects.filter(
+  (project) => project.featured
+);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Daniela Chanta | Data Science & Machine Learning"
+  description="Portfolio of Daniela Chanta, Data Science student at École Polytechnique and engineering student at Télécom Paris."
+>
+  <Navbar />
+
+  <main>
+
+    <!-- HERO -->
+
+    <section
+      class="mx-auto flex min-h-[90vh] max-w-6xl items-center px-6 pt-28 lg:px-8"
+    >
+      <div class="max-w-4xl">
+
+        <p
+          class="mb-6 text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Data Science · Machine Learning · AI
+        </p>
+
+        <h1
+          class="text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl lg:text-7xl"
+        >
+          Daniela Chanta
+        </h1>
+
+        <p
+          class="mt-8 max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl"
+        >
+          M2 Data Science student at École Polytechnique and engineering
+          student at Télécom Paris, working at the intersection of machine
+          learning, data science and real-world engineering systems.
+        </p>
+
+        <p class="mt-6 text-sm leading-6 text-slate-500">
+          Seeking a 6-month Data Science / Machine Learning internship
+          in France · Available April 2027
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-4">
+
+          <a
+            href="/projects"
+            class="rounded-lg bg-slate-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-slate-800"
+          >
+            View Projects
+          </a>
+
+          <a
+            href="/cv/Daniela_Chanta_CV.pdf"
+            target="_blank"
+            class="rounded-lg border border-slate-300 px-6 py-3 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-white"
+          >
+            View CV
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FEATURED PROJECTS -->
+
+    <section
+      id="projects"
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div
+        class="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between"
+      >
+
+        <div>
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Selected Work
+          </p>
+
+          <h2
+            class="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl"
+          >
+            Projects across AI, data science and engineering.
+          </h2>
+        </div>
+
+        <a
+          href="/projects"
+          class="text-sm font-medium text-slate-600 transition hover:text-slate-950"
+        >
+          View all projects →
+        </a>
+
+      </div>
+
+
+      <div class="grid gap-6 md:grid-cols-2">
+
+        {
+          featuredProjects.map((project) => (
+            <ProjectCard {...project} />
+          ))
+        }
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section
+      id="experience"
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Experience
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            From engineering systems to applied AI.
+          </h2>
+
+        </div>
+
+
+        <div class="divide-y divide-slate-200">
+
+          <!-- ALSI AI -->
+
+          <article class="grid gap-3 py-8 first:pt-0 sm:grid-cols-[120px_1fr]">
+
+            <p class="text-sm text-slate-400">
+              2026
+            </p>
+
+            <div>
+
+              <h3 class="font-semibold text-slate-950">
+                AI Automation Consultant
+              </h3>
+
+              <p class="mt-1 text-sm text-slate-500">
+                ALSI Perú
+              </p>
+
+              <p class="mt-4 max-w-2xl leading-7 text-slate-600">
+                Developed AI-powered automation solutions integrating
+                natural-language interaction with internal business
+                workflows using OpenAI, FastAPI, Azure and Zoho services.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- ALSI ENGINEER -->
+
+          <article class="grid gap-3 py-8 sm:grid-cols-[120px_1fr]">
+
+            <p class="text-sm text-slate-400">
+              2025
+            </p>
+
+            <div>
+
+              <h3 class="font-semibold text-slate-950">
+                Application Engineer
+              </h3>
+
+              <p class="mt-1 text-sm text-slate-500">
+                ALSI Perú
+              </p>
+
+              <p class="mt-4 max-w-2xl leading-7 text-slate-600">
+                Developed data-driven monitoring and control solutions
+                for HVAC systems using IoT sensors, occupancy,
+                temperature and energy data.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- ALBERTA -->
+
+          <article class="grid gap-3 py-8 sm:grid-cols-[120px_1fr]">
+
+            <p class="text-sm text-slate-400">
+              2024
+            </p>
+
+            <div>
+
+              <h3 class="font-semibold text-slate-950">
+                Research Intern / Developer
+              </h3>
+
+              <p class="mt-1 text-sm text-slate-500">
+                University of Alberta
+              </p>
+
+              <p class="mt-4 max-w-2xl leading-7 text-slate-600">
+                Developed Python engineering applications and worked on
+                computer-vision and optimization methods for photovoltaic
+                rooftop analysis.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+      <div class="mt-12">
+
+  <a
+      href="/experience"
+      class="text-sm font-medium text-slate-900"
+    >
+      View full experience →
+    </a>
+
+  </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <p
+        class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+      >
+        Education
+      </p>
+
+      <div class="mt-12 grid gap-10 md:grid-cols-3">
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            2026–2027
+          </p>
+
+          <h3
+            class="mt-3 text-lg font-semibold text-slate-950"
+          >
+            École Polytechnique
+          </h3>
+
+          <p class="mt-2 text-slate-600">
+            M2 Data Science
+          </p>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Institut Polytechnique de Paris
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            2025–2027
+          </p>
+
+          <h3
+            class="mt-3 text-lg font-semibold text-slate-950"
+          >
+            Télécom Paris
+          </h3>
+
+          <p class="mt-2 text-slate-600">
+            Diplôme d'Ingénieur
+          </p>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Double Degree Program
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            2020–2025
+          </p>
+
+          <h3
+            class="mt-3 text-lg font-semibold text-slate-950"
+          >
+            Universidad Nacional de Ingeniería
+          </h3>
+
+          <p class="mt-2 text-slate-600">
+            Electronic Engineering
+          </p>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Lima, Peru
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- RECOGNITION -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <p
+        class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+      >
+        Selected Recognition
+      </p>
+
+      <div class="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2">
+
+        <article>
+
+          <h3 class="font-semibold text-slate-950">
+            Eiffel Excellence Scholarship
+          </h3>
+
+          <p class="mt-2 text-sm text-slate-500">
+            French Government · 2025
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3 class="font-semibold text-slate-950">
+            University of Alberta Research Experience
+          </h3>
+
+          <p class="mt-2 text-sm text-slate-500">
+            UARE · 2024
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3 class="font-semibold text-slate-950">
+            SUSI Women Leaders Scholarship
+          </h3>
+
+          <p class="mt-2 text-sm text-slate-500">
+            United States Embassy in Peru · 2024
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3 class="font-semibold text-slate-950">
+            Ranked 1st — Electronic Engineering
+          </h3>
+
+          <p class="mt-2 text-sm text-slate-500">
+            Universidad Nacional de Ingeniería
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT CTA -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Get in touch
+        </p>
+
+        <h2
+          class="mt-5 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl"
+        >
+          Interested in data science, machine learning and applied AI opportunities.
+        </h2>
+
+        <a
+          href="mailto:daniela.chantarodas@telecom-paris.fr"
+          class="mt-8 inline-block text-sm font-medium text-slate-900"
+        >
+          daniela.chantarodas@telecom-paris.fr →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+
+</BaseLayout>

@@ -1,0 +1,652 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import ProjectHero from "../../components/ProjectHero.astro";
+
+const technologies = [
+  "Python",
+  "NLP",
+  "HMM",
+  "CRF",
+  "Sequence Labeling",
+];
+---
+
+<BaseLayout
+  title="Part-of-Speech Tagging with HMM and CRF | Daniela Chanta"
+  description="Comparison of Hidden Markov Models and Conditional Random Fields for part-of-speech tagging."
+>
+  <Navbar />
+
+  <main>
+
+    <!-- HERO -->
+
+    <ProjectHero
+      category="Natural Language Processing · Sequence Labeling"
+      title="Part-of-Speech Tagging with HMM and CRF"
+      description="A comparative NLP project exploring probabilistic sequence models for part-of-speech tagging using supervised and unsupervised approaches."
+      year="2026"
+      role="Machine Learning Project"
+      organization="Télécom Paris"
+      technologies={technologies}
+    />
+
+
+    <!-- OVERVIEW -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Overview
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Comparing probabilistic models for sequence labeling.
+          </h2>
+
+        </div>
+
+
+        <div class="space-y-6 leading-8 text-slate-600">
+
+          <p>
+            The project focused on part-of-speech tagging, where each word in a
+            sentence must be assigned a grammatical label such as noun, verb or
+            adjective.
+          </p>
+
+          <p>
+            Hidden Markov Models and Conditional Random Fields were implemented
+            and compared to study how different probabilistic approaches handle
+            sequential dependencies in text.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- TASK -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Task
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          Predicting a grammatical tag for every token in a sentence.
+        </h2>
+
+        <p class="mt-6 leading-8 text-slate-600">
+          Unlike standard classification, part-of-speech tagging is a sequence
+          problem: the predicted label of a word depends not only on the word
+          itself, but also on the surrounding context and neighboring tags.
+        </p>
+
+      </div>
+
+
+      <div class="mt-12 rounded-2xl border border-slate-200 bg-white p-8">
+
+        <p
+          class="text-xs font-medium uppercase tracking-[0.15em] text-slate-400"
+        >
+          Example
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+
+          <div class="rounded-lg bg-slate-50 px-4 py-3">
+            <p class="font-medium text-slate-950">
+              The
+            </p>
+            <p class="mt-1 text-xs text-slate-500">
+              DET
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-slate-50 px-4 py-3">
+            <p class="font-medium text-slate-950">
+              model
+            </p>
+            <p class="mt-1 text-xs text-slate-500">
+              NOUN
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-slate-50 px-4 py-3">
+            <p class="font-medium text-slate-950">
+              predicts
+            </p>
+            <p class="mt-1 text-xs text-slate-500">
+              VERB
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-slate-50 px-4 py-3">
+            <p class="font-medium text-slate-950">
+              tags
+            </p>
+            <p class="mt-1 text-xs text-slate-500">
+              NOUN
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- APPROACHES -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Models
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          Generative and discriminative approaches.
+        </h2>
+
+      </div>
+
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-8">
+
+          <p
+            class="text-xs font-medium uppercase tracking-[0.15em] text-slate-400"
+          >
+            Hidden Markov Model
+          </p>
+
+          <h3 class="mt-4 text-xl font-semibold text-slate-950">
+            HMM
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-slate-600">
+            The HMM models the probability of tag transitions together with the
+            probability of observing words given their hidden grammatical tags.
+          </p>
+
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Both supervised and unsupervised configurations were explored.
+          </p>
+
+        </article>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-8">
+
+          <p
+            class="text-xs font-medium uppercase tracking-[0.15em] text-slate-400"
+          >
+            Conditional Random Field
+          </p>
+
+          <h3 class="mt-4 text-xl font-semibold text-slate-950">
+            CRF
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-slate-600">
+            The CRF directly models the conditional probability of a complete
+            tag sequence given the observed sentence.
+          </p>
+
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            This allows contextual features to contribute to the prediction
+            without requiring the same observation assumptions as the HMM.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- PIPELINE -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Workflow
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          From token sequences to predicted grammatical tags.
+        </h2>
+
+      </div>
+
+
+      <div
+        class="mt-12 grid items-stretch gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr]"
+      >
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            01
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Corpus
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Sentences represented as sequences of tokens and grammatical tags.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            02
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Training
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Model parameters learned from labeled or unlabeled sequence data.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            03
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Decoding
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            The most likely grammatical sequence is inferred for unseen text.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            04
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Evaluation
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Predicted tags compared against ground-truth annotations.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- RESULTS -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Results
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Supervision and model structure produced very different performance.
+          </h2>
+
+        </div>
+
+
+        <div class="grid gap-6 sm:grid-cols-3">
+
+          <article
+            class="rounded-2xl border border-slate-200 bg-white p-6"
+          >
+
+            <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+              Supervised HMM
+            </p>
+
+            <p
+              class="mt-5 text-4xl font-semibold tracking-tight text-slate-950"
+            >
+              84.4%
+            </p>
+
+            <p class="mt-3 text-sm text-slate-500">
+              Accuracy
+            </p>
+
+          </article>
+
+
+          <article
+            class="rounded-2xl border border-slate-200 bg-white p-6"
+          >
+
+            <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+              CRF
+            </p>
+
+            <p
+              class="mt-5 text-4xl font-semibold tracking-tight text-slate-950"
+            >
+              96.3%
+            </p>
+
+            <p class="mt-3 text-sm text-slate-500">
+              Accuracy
+            </p>
+
+          </article>
+
+
+          <article
+            class="rounded-2xl border border-slate-200 bg-white p-6"
+          >
+
+            <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+              Unsupervised HMM
+            </p>
+
+            <p
+              class="mt-5 text-4xl font-semibold tracking-tight text-slate-950"
+            >
+              ~33%
+            </p>
+
+            <p class="mt-3 text-sm text-slate-500">
+              Accuracy
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTERPRETATION -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Interpretation
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          Contextual modeling substantially improved sequence labeling.
+        </h2>
+
+      </div>
+
+
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            01
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            CRF performed best
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            The discriminative CRF achieved the highest accuracy among the
+            evaluated approaches.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            02
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Labeled data mattered
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            The gap between supervised and unsupervised HMM performance showed
+            the importance of supervision for this task.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            03
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Sequence structure matters
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            POS tagging illustrates why predictions over text often benefit
+            from modeling dependencies between neighboring labels.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- TECH STACK -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Technology
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Technical stack
+          </h2>
+
+        </div>
+
+
+        <div class="grid gap-8 sm:grid-cols-2">
+
+          <div>
+            <p class="text-sm font-semibold text-slate-950">
+              Programming
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Python
+            </p>
+          </div>
+
+
+          <div>
+            <p class="text-sm font-semibold text-slate-950">
+              NLP
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Part-of-Speech Tagging · Sequence Labeling
+            </p>
+          </div>
+
+
+          <div>
+            <p class="text-sm font-semibold text-slate-950">
+              Probabilistic Models
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              HMM · CRF
+            </p>
+          </div>
+
+
+          <div>
+            <p class="text-sm font-semibold text-slate-950">
+              Evaluation
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Accuracy · Supervised vs. unsupervised comparison
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BACK -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div
+        class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between"
+      >
+
+        <div>
+
+          <p
+            class="text-sm uppercase tracking-[0.18em] text-slate-400"
+          >
+            Explore More
+          </p>
+
+          <h2
+            class="mt-3 text-2xl font-semibold text-slate-950"
+          >
+            More machine learning and research projects
+          </h2>
+
+        </div>
+
+        <a
+          href="/projects"
+          class="text-sm font-medium text-slate-900"
+        >
+          Back to all projects →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+
+</BaseLayout>

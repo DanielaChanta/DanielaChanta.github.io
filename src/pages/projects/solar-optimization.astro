@@ -1,0 +1,849 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import ProjectHero from "../../components/ProjectHero.astro";
+
+const technologies = [
+  "Python",
+  "OpenCV",
+  "scikit-image",
+  "Image Processing",
+  "Computer Vision",
+  "Optimization",
+  "MecSimCalc",
+];
+---
+
+<BaseLayout
+  title="Rooftop Solar Panel Optimization | Daniela Chanta"
+  description="Computer-vision and optimization pipeline for rooftop analysis and photovoltaic panel placement developed during the University of Alberta Research Experience."
+>
+  <Navbar />
+
+  <main>
+
+    <!-- HERO -->
+
+    <ProjectHero
+      category="Computer Vision · Optimization · Engineering"
+      title="Rooftop Solar Panel Optimization"
+      description="A computer-vision and optimization pipeline for analyzing rooftop geometry, estimating feasible photovoltaic panel placement and supporting engineering decision-making."
+      year="2024"
+      role="Research Intern / Developer"
+      organization="University of Alberta"
+      technologies={technologies}
+    />
+
+
+    <!-- OVERVIEW -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Overview
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Automating part of the photovoltaic design workflow.
+          </h2>
+        </div>
+
+        <div class="space-y-6 text-base leading-8 text-slate-600">
+
+          <p>
+            This project was developed during the University of Alberta
+            Research Experience and explored how image processing and
+            optimization techniques could support rooftop photovoltaic
+            analysis.
+          </p>
+
+          <p>
+            The objective was to process rooftop imagery and geometric
+            information in Python, identify usable roof regions, evaluate panel
+            placement constraints and estimate possible photovoltaic layouts.
+          </p>
+
+          <p>
+            The resulting workflow combined computer vision with engineering
+            constraints so that visual information could be transformed into
+            a structured decision-support process.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROBLEM -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            The Problem
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Rooftop solar design requires reasoning about geometry, constraints and energy potential.
+          </h2>
+        </div>
+
+        <div class="space-y-6 leading-8 text-slate-600">
+
+          <p>
+            Evaluating whether a rooftop is suitable for photovoltaic
+            installation is not only a matter of measuring total surface area.
+            The usable region can be affected by roof shape, orientation,
+            boundaries and placement constraints.
+          </p>
+
+          <p>
+            A manual evaluation can become repetitive when many rooftops or
+            different panel configurations must be considered.
+          </p>
+
+          <p>
+            The project investigated how image-processing techniques could
+            automate geometric analysis and provide inputs for panel-placement
+            optimization.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PIPELINE -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Pipeline
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          From rooftop imagery to panel-layout candidates.
+        </h2>
+
+        <p class="mt-6 leading-8 text-slate-600">
+          The workflow combined image analysis, geometric processing and
+          optimization to convert rooftop information into feasible solar-panel
+          configurations.
+        </p>
+
+      </div>
+
+
+      <div
+        class="mt-14 grid items-stretch gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr]"
+      >
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            01
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Rooftop Input
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Roof imagery and geometric information used as the basis for
+            analysis.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            02
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Image Processing
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Computer-vision operations extract usable rooftop regions and
+            structural boundaries.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            03
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Layout Optimization
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Candidate panel configurations are evaluated under geometric and
+            placement constraints.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            04
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Engineering Output
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Estimated panel placement, orientation and potential energy
+            production.
+          </p>
+
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- COMPUTER VISION -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Computer Vision
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Extracting useful geometric information from rooftop imagery.
+          </h2>
+        </div>
+
+
+        <div>
+
+          <p class="leading-8 text-slate-600">
+            Image-processing operations were used to transform roof imagery
+            into geometric information that could later be consumed by the
+            optimization stage.
+          </p>
+
+
+          <div class="mt-10 space-y-8">
+
+            <div class="grid gap-4 sm:grid-cols-[50px_1fr]">
+
+              <p class="text-sm text-slate-400">
+                01
+              </p>
+
+              <div>
+                <h3 class="font-semibold text-slate-950">
+                  Image preprocessing
+                </h3>
+
+                <p class="mt-2 text-sm leading-7 text-slate-600">
+                  Input imagery was prepared for analysis using Python-based
+                  image-processing tools.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="grid gap-4 sm:grid-cols-[50px_1fr]">
+
+              <p class="text-sm text-slate-400">
+                02
+              </p>
+
+              <div>
+                <h3 class="font-semibold text-slate-950">
+                  Region identification
+                </h3>
+
+                <p class="mt-2 text-sm leading-7 text-slate-600">
+                  Rooftop boundaries and usable regions were identified so that
+                  geometric constraints could be represented computationally.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="grid gap-4 sm:grid-cols-[50px_1fr]">
+
+              <p class="text-sm text-slate-400">
+                03
+              </p>
+
+              <div>
+                <h3 class="font-semibold text-slate-950">
+                  Geometric representation
+                </h3>
+
+                <p class="mt-2 text-sm leading-7 text-slate-600">
+                  Visual information was converted into structured geometric
+                  data for use by the placement algorithm.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- OPTIMIZATION -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Optimization
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Searching for feasible photovoltaic layouts.
+          </h2>
+
+        </div>
+
+
+        <div class="space-y-6 leading-8 text-slate-600">
+
+          <p>
+            Once the rooftop geometry was represented computationally, panel
+            placement could be formulated as a constrained optimization
+            problem.
+          </p>
+
+          <p>
+            Candidate layouts needed to respect the usable roof region while
+            considering panel dimensions, orientation and available space.
+          </p>
+
+          <p>
+            The optimization stage was designed to identify configurations that
+            could increase useful rooftop coverage while remaining physically
+            feasible.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- OBJECTIVES -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Optimization Objectives
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          Balancing geometric feasibility and photovoltaic potential.
+        </h2>
+
+      </div>
+
+
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            01
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Feasible placement
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Panels must remain within valid rooftop regions and satisfy
+            geometric constraints.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            02
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Rooftop utilization
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Candidate layouts seek to make effective use of available rooftop
+            surface.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            03
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Energy estimation
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Panel placement and orientation can be connected with expected
+            photovoltaic energy production.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ENGINEERING APPLICATION -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Engineering Application
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Computer vision as part of an engineering decision-support tool.
+          </h2>
+
+        </div>
+
+
+        <div class="space-y-6 leading-8 text-slate-600">
+
+          <p>
+            A key aspect of the project was connecting computer-vision methods
+            with an engineering objective rather than treating image analysis
+            as an isolated task.
+          </p>
+
+          <p>
+            Image processing provided the geometric representation, while the
+            optimization stage transformed that representation into practical
+            layout candidates.
+          </p>
+
+          <p>
+            This combination made the workflow suitable for integration into
+            interactive engineering applications.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MECSIMCALC -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Research Environment
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Python engineering applications with MecSimCalc.
+          </h2>
+
+        </div>
+
+
+        <div class="space-y-6 leading-8 text-slate-600">
+
+          <p>
+            The project was developed as part of the University of Alberta
+            Research Experience, where Python engineering applications were
+            implemented using the MecSimCalc platform.
+          </p>
+
+          <p>
+            In parallel with the rooftop-analysis project, interactive
+            engineering applications were developed to automate exercises and
+            provide immediate feedback to students.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VISUAL PLACEHOLDER -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Visualization
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          From rooftop image to optimized panel layout.
+        </h2>
+
+        <p class="mt-6 leading-8 text-slate-600">
+          A visual example of the image-processing and panel-placement pipeline
+          will be included here.
+        </p>
+
+      </div>
+
+
+      <div
+        class="mt-12 flex min-h-[380px] items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white"
+      >
+
+        <div class="max-w-sm px-8 text-center">
+
+          <p class="text-sm font-medium text-slate-700">
+            Rooftop analysis visualization
+          </p>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Original image → detected roof region → optimized photovoltaic
+            layout.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TECH STACK -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Technology
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Technical stack
+          </h2>
+
+        </div>
+
+
+        <div class="grid gap-8 sm:grid-cols-2">
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              Programming
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Python
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              Computer Vision
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              OpenCV · scikit-image
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              Methods
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Image processing · Geometric analysis · Optimization
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              Engineering Platform
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              MecSimCalc
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHAT I LEARNED -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Technical Takeaways
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          Combining algorithms around the engineering problem.
+        </h2>
+
+      </div>
+
+
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            01
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Vision is only one stage
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Detecting geometric information becomes more valuable when the
+            output is structured for downstream decision-making.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            02
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Constraints matter
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            A mathematically attractive layout is only useful if it also
+            satisfies physical and geometric constraints.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            03
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Engineering + computation
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            The project reinforced the value of combining domain knowledge with
+            computational tools instead of treating them separately.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEXT PROJECT -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div
+        class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between"
+      >
+
+        <div>
+
+          <p
+            class="text-sm uppercase tracking-[0.18em] text-slate-400"
+          >
+            Next Project
+          </p>
+
+          <h2
+            class="mt-3 text-2xl font-semibold text-slate-950"
+          >
+            Part-of-Speech Tagging with HMM and CRF
+          </h2>
+
+        </div>
+
+
+        <a
+          href="/projects/nlp-hmm-crf"
+          class="text-sm font-medium text-slate-900"
+        >
+          View project →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+
+</BaseLayout>

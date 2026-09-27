@@ -1,0 +1,910 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import ProjectHero from "../../components/ProjectHero.astro";
+
+const technologies = [
+  "Python",
+  "MQTT",
+  "Node-RED",
+  "Azure SQL",
+  "BLE Sensors",
+  "Occupancy Sensing",
+  "Energy Monitoring",
+  "IoT",
+];
+---
+
+<BaseLayout
+  title="Smart HVAC Monitoring & Control | Daniela Chanta"
+  description="IoT-based HVAC monitoring and control system using occupancy, temperature and energy data for data-driven building operation."
+>
+  <Navbar />
+
+  <main>
+
+    <!-- HERO -->
+
+    <ProjectHero
+      category="IoT · Data Engineering · Building Automation"
+      title="Smart HVAC Monitoring & Control"
+      description="A real-time monitoring and control system combining occupancy, temperature and energy data to improve HVAC operation in commercial and healthcare environments."
+      year="2024–2025"
+      role="Application Engineer"
+      organization="ALSI Perú"
+      technologies={technologies}
+    />
+
+
+    <!-- OVERVIEW -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Overview
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Turning building telemetry into operational decisions.
+          </h2>
+        </div>
+
+        <div class="space-y-6 text-base leading-8 text-slate-600">
+
+          <p>
+            The project focused on monitoring and controlling HVAC systems
+            using real-time data from environmental, occupancy and energy
+            sensors.
+          </p>
+
+          <p>
+            Data from distributed IoT devices was collected through MQTT,
+            processed using Python and Node-RED, and stored in Azure SQL for
+            monitoring and historical analysis.
+          </p>
+
+          <p>
+            Control strategies used occupancy and temperature information to
+            reduce unnecessary HVAC operation while maintaining suitable indoor
+            conditions.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROBLEM -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            The Problem
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            HVAC systems can continue operating even when demand is low or absent.
+          </h2>
+        </div>
+
+        <div class="space-y-6 leading-8 text-slate-600">
+
+          <p>
+            Conventional schedules and fixed operating rules do not always
+            reflect actual building occupancy or thermal conditions.
+          </p>
+
+          <p>
+            This can lead to unnecessary operation during unoccupied periods
+            and create opportunities for reducing energy consumption through
+            more adaptive control strategies.
+          </p>
+
+          <p>
+            The goal was to combine real-time sensing with automated control
+            logic while preserving a reliable and interpretable operational
+            workflow.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SYSTEM ARCHITECTURE -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          System Architecture
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          From sensors to control decisions.
+        </h2>
+
+        <p class="mt-6 leading-8 text-slate-600">
+          The system connected distributed sensors with a cloud-based data
+          pipeline and control layer.
+        </p>
+
+      </div>
+
+
+      <div
+        class="mt-14 grid items-stretch gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr]"
+      >
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            01
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Sensors
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Temperature, humidity, occupancy and electrical measurements.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            02
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            MQTT
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Sensor measurements transmitted through real-time messaging.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            03
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Processing & Storage
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Python and Node-RED process the stream before storage in Azure SQL.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            04
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            HVAC Control
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Occupancy and temperature rules determine equipment operation.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- DATA PIPELINE -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Data Pipeline
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Continuous acquisition and historical analysis.
+          </h2>
+
+        </div>
+
+
+        <div>
+
+          <p class="leading-8 text-slate-600">
+            The data architecture supported both real-time operation and
+            retrospective analysis of HVAC behavior.
+          </p>
+
+
+          <div class="mt-10 space-y-8">
+
+            <div class="grid gap-4 sm:grid-cols-[50px_1fr]">
+
+              <p class="text-sm text-slate-400">
+                01
+              </p>
+
+              <div>
+
+                <h3 class="font-semibold text-slate-950">
+                  Sensor acquisition
+                </h3>
+
+                <p class="mt-2 text-sm leading-7 text-slate-600">
+                  Environmental, occupancy and electrical measurements were
+                  collected from distributed IoT devices.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="grid gap-4 sm:grid-cols-[50px_1fr]">
+
+              <p class="text-sm text-slate-400">
+                02
+              </p>
+
+              <div>
+
+                <h3 class="font-semibold text-slate-950">
+                  Messaging
+                </h3>
+
+                <p class="mt-2 text-sm leading-7 text-slate-600">
+                  MQTT provided a lightweight mechanism for transmitting
+                  measurements between devices and backend services.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="grid gap-4 sm:grid-cols-[50px_1fr]">
+
+              <p class="text-sm text-slate-400">
+                03
+              </p>
+
+              <div>
+
+                <h3 class="font-semibold text-slate-950">
+                  Processing
+                </h3>
+
+                <p class="mt-2 text-sm leading-7 text-slate-600">
+                  Python and Node-RED workflows transformed and routed incoming
+                  data according to the needs of monitoring and control logic.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="grid gap-4 sm:grid-cols-[50px_1fr]">
+
+              <p class="text-sm text-slate-400">
+                04
+              </p>
+
+              <div>
+
+                <h3 class="font-semibold text-slate-950">
+                  Cloud storage
+                </h3>
+
+                <p class="mt-2 text-sm leading-7 text-slate-600">
+                  Measurements were persisted in Azure SQL for historical
+                  analysis and performance evaluation.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- DATA SOURCES -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Data
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          Multiple signals describing how the building was actually being used.
+        </h2>
+
+      </div>
+
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-7">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            Environmental
+          </p>
+
+          <h3 class="mt-4 text-lg font-semibold text-slate-950">
+            Temperature & humidity
+          </h3>
+
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Environmental measurements were used to characterize indoor
+            conditions and support temperature-based control.
+          </p>
+
+        </article>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-7">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            Occupancy
+          </p>
+
+          <h3 class="mt-4 text-lg font-semibold text-slate-950">
+            Presence information
+          </h3>
+
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Occupancy sensing provided information about whether conditioned
+            spaces were actively being used.
+          </p>
+
+        </article>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-7">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            Energy
+          </p>
+
+          <h3 class="mt-4 text-lg font-semibold text-slate-950">
+            Electrical consumption
+          </h3>
+
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Electrical measurements were used to analyze HVAC operation and
+            identify potential energy-saving opportunities.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTROL STRATEGY -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Control Strategy
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Simple, interpretable rules driven by real-time context.
+          </h2>
+
+        </div>
+
+
+        <div class="space-y-6 leading-8 text-slate-600">
+
+          <p>
+            The control layer combined occupancy and temperature information
+            to adapt HVAC operation to actual building conditions.
+          </p>
+
+          <p>
+            Instead of operating equipment exclusively according to fixed
+            schedules, the system could reduce or stop HVAC operation when
+            spaces were unoccupied and restore operation when conditions
+            required it.
+          </p>
+
+          <p>
+            The rules were intentionally interpretable so that their behavior
+            could be understood and validated by engineering teams.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PILOT CASES -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Pilot Implementations
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          Control strategies adapted to different HVAC configurations.
+        </h2>
+
+      </div>
+
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+
+        <article
+          class="rounded-2xl border border-slate-200 bg-white p-8"
+        >
+
+          <p
+            class="text-xs font-medium uppercase tracking-[0.15em] text-slate-400"
+          >
+            Pilot 01
+          </p>
+
+          <h3 class="mt-4 text-xl font-semibold text-slate-950">
+            Fan-coil control
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-slate-600">
+            Occupancy and temperature measurements were used to adjust
+            fan-coil operation through a variable control signal.
+          </p>
+
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            A temperature hysteresis strategy helped avoid excessive switching
+            while occupancy information influenced the required operating level.
+          </p>
+
+        </article>
+
+
+        <article
+          class="rounded-2xl border border-slate-200 bg-white p-8"
+        >
+
+          <p
+            class="text-xs font-medium uppercase tracking-[0.15em] text-slate-400"
+          >
+            Pilot 02
+          </p>
+
+          <h3 class="mt-4 text-xl font-semibold text-slate-950">
+            Split-unit control
+          </h3>
+
+          <p class="mt-5 text-sm leading-7 text-slate-600">
+            For on/off equipment, occupancy was used to determine whether the
+            system should remain active when spaces were no longer being used.
+          </p>
+
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            A short persistence interval was introduced before switching off
+            the unit to avoid reacting to temporary occupancy fluctuations.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ANALYSIS -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Analysis
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Evaluating HVAC behavior with historical data.
+          </h2>
+
+        </div>
+
+
+        <div class="space-y-6 leading-8 text-slate-600">
+
+          <p>
+            Historical measurements were used to compare equipment operation
+            with building occupancy and identify periods of unnecessary energy
+            consumption.
+          </p>
+
+          <p>
+            Energy profiles were particularly useful for evaluating behavior
+            outside expected occupancy periods and verifying whether control
+            strategies reduced unnecessary operation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- RESULTS -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Outcome
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Reducing operation when cooling demand was not present.
+          </h2>
+
+        </div>
+
+
+        <div class="space-y-8">
+
+          <article>
+
+            <p class="text-sm text-slate-400">
+              01
+            </p>
+
+            <h3 class="mt-3 text-lg font-semibold text-slate-950">
+              Near-zero overnight consumption
+            </h3>
+
+            <p class="mt-3 leading-7 text-slate-600">
+              Monitoring showed that unnecessary overnight HVAC operation could
+              be significantly reduced when control rules were applied.
+            </p>
+
+          </article>
+
+
+          <article>
+
+            <p class="text-sm text-slate-400">
+              02
+            </p>
+
+            <h3 class="mt-3 text-lg font-semibold text-slate-950">
+              Occupancy-aware operation
+            </h3>
+
+            <p class="mt-3 leading-7 text-slate-600">
+              Equipment behavior became more closely aligned with whether
+              conditioned spaces were actually occupied.
+            </p>
+
+          </article>
+
+
+          <article>
+
+            <p class="text-sm text-slate-400">
+              03
+            </p>
+
+            <h3 class="mt-3 text-lg font-semibold text-slate-950">
+              Data-driven evaluation
+            </h3>
+
+            <p class="mt-3 leading-7 text-slate-600">
+              Historical sensor and energy data provided an objective way to
+              evaluate HVAC behavior before and after control changes.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VISUAL PLACEHOLDER -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          System Visualization
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          Real-time building data and energy behavior.
+        </h2>
+
+        <p class="mt-6 leading-8 text-slate-600">
+          Monitoring dashboards, sensor architecture and energy-consumption
+          plots can be included here to illustrate system operation.
+        </p>
+
+      </div>
+
+
+      <div
+        class="mt-12 flex min-h-[360px] items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white"
+      >
+
+        <div class="max-w-sm px-8 text-center">
+
+          <p class="text-sm font-medium text-slate-700">
+            Monitoring / energy visualization
+          </p>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Dashboard, sensor architecture or consumption figure will be
+            added here.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TECH STACK -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Technology
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Technical stack
+          </h2>
+
+        </div>
+
+
+        <div class="grid gap-8 sm:grid-cols-2">
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              Data & Backend
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Python · MQTT · Node-RED
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              Cloud & Storage
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Microsoft Azure · Azure SQL
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              IoT
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              BLE environmental sensors · Occupancy sensing
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              Building Data
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Temperature · Humidity · Occupancy · Energy
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    
+
+    <!-- NEXT PROJECT -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div
+        class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between"
+      >
+
+        <div>
+
+          <p
+            class="text-sm uppercase tracking-[0.18em] text-slate-400"
+          >
+            Next Project
+          </p>
+
+          <h2
+            class="mt-3 text-2xl font-semibold text-slate-950"
+          >
+            Rooftop Solar Panel Optimization
+          </h2>
+
+        </div>
+
+
+        <a
+          href="/projects/solar-optimization"
+          class="text-sm font-medium text-slate-900"
+        >
+          View project →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+
+</BaseLayout>

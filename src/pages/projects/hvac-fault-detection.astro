@@ -1,0 +1,606 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import ProjectHero from "../../components/ProjectHero.astro";
+
+const technologies = [
+  "Python",
+  "scikit-learn",
+  "Random Forest",
+  "SVM",
+  "Neural Networks",
+  "Classification",
+  "ASHRAE RP-1043",
+];
+---
+
+<BaseLayout
+  title="HVAC Fault Detection | Daniela Chanta"
+  description="Machine-learning comparison for HVAC fault classification using Random Forest, SVM and neural networks."
+>
+  <Navbar />
+
+  <main>
+
+    <!-- HERO -->
+
+    <ProjectHero
+      category="Machine Learning · Classification · HVAC"
+      title="HVAC Fault Detection"
+      description="A machine-learning project comparing classification approaches for detecting HVAC system faults from operational data."
+      year="2025"
+      role="Machine Learning Project"
+      organization="Universidad Nacional de Ingeniería"
+      technologies={technologies}
+    />
+
+
+    <!-- OVERVIEW -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Overview
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Using machine learning to identify abnormal HVAC behavior.
+          </h2>
+
+        </div>
+
+
+        <div class="space-y-6 leading-8 text-slate-600">
+
+          <p>
+            The project explored supervised machine-learning approaches for
+            classifying HVAC operating conditions and identifying system
+            faults from measured data.
+          </p>
+
+          <p>
+            Random Forest, Support Vector Machine and neural-network models
+            were implemented and compared using the ASHRAE RP-1043 dataset.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROBLEM -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Problem
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Equipment faults can be reflected in patterns across multiple operational variables.
+          </h2>
+
+        </div>
+
+
+        <div class="space-y-6 leading-8 text-slate-600">
+
+          <p>
+            HVAC systems generate measurements describing temperatures,
+            operating conditions and equipment behavior.
+          </p>
+
+          <p>
+            Fault detection can therefore be formulated as a classification
+            problem in which the model learns to distinguish normal operation
+            from different abnormal conditions.
+          </p>
+
+          <p>
+            The project compared several model families to study how different
+            classification approaches behave on the same engineering dataset.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WORKFLOW -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Workflow
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          From operational data to fault classification.
+        </h2>
+
+      </div>
+
+
+      <div
+        class="mt-12 grid items-stretch gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr]"
+      >
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            01
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            HVAC Data
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Operational measurements representing normal and faulty system
+            conditions.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            02
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Preprocessing
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Data prepared for supervised machine-learning experiments.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            03
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Model Training
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Random Forest, SVM and neural-network classifiers trained on the
+            same task.
+          </p>
+
+        </article>
+
+
+        <div class="hidden items-center text-slate-300 lg:flex">
+          →
+        </div>
+
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs uppercase tracking-[0.15em] text-slate-400">
+            04
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Evaluation
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-500">
+            Model behavior compared for HVAC fault classification.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- MODELS -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Models
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          Comparing different approaches to the same classification problem.
+        </h2>
+
+      </div>
+
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+        <!-- RANDOM FOREST -->
+
+        <article
+          class="rounded-2xl border border-slate-200 bg-white p-7"
+        >
+
+          <p
+            class="text-xs font-medium uppercase tracking-[0.15em] text-slate-400"
+          >
+            Ensemble Learning
+          </p>
+
+          <h3 class="mt-4 text-lg font-semibold text-slate-950">
+            Random Forest
+          </h3>
+
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Tree-based ensemble model capable of representing nonlinear
+            relationships and interactions between operational variables.
+          </p>
+
+        </article>
+
+
+        <!-- SVM -->
+
+        <article
+          class="rounded-2xl border border-slate-200 bg-white p-7"
+        >
+
+          <p
+            class="text-xs font-medium uppercase tracking-[0.15em] text-slate-400"
+          >
+            Kernel Method
+          </p>
+
+          <h3 class="mt-4 text-lg font-semibold text-slate-950">
+            Support Vector Machine
+          </h3>
+
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Margin-based classifier used to explore separation between normal
+            and faulty operating conditions.
+          </p>
+
+        </article>
+
+
+        <!-- NN -->
+
+        <article
+          class="rounded-2xl border border-slate-200 bg-white p-7"
+        >
+
+          <p
+            class="text-xs font-medium uppercase tracking-[0.15em] text-slate-400"
+          >
+            Neural Model
+          </p>
+
+          <h3 class="mt-4 text-lg font-semibold text-slate-950">
+            Neural Network
+          </h3>
+
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Feed-forward neural model used as an additional nonlinear
+            classification approach.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- DOMAIN CONNECTION -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Domain Context
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Machine learning applied to a system I already understood from engineering practice.
+          </h2>
+
+        </div>
+
+
+        <div class="space-y-6 leading-8 text-slate-600">
+
+          <p>
+            The project connected machine-learning coursework with prior
+            experience working on HVAC monitoring and building-automation
+            systems.
+          </p>
+
+          <p>
+            This domain context made it possible to approach fault
+            classification not only as a generic prediction problem, but also
+            as an engineering task in which sensor behavior, system operation
+            and practical interpretability matter.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TECH STACK -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
+
+        <div>
+
+          <p
+            class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+          >
+            Technology
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+          >
+            Technical stack
+          </h2>
+
+        </div>
+
+
+        <div class="grid gap-8 sm:grid-cols-2">
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              Programming
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Python
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              Machine Learning
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              scikit-learn · Classification
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              Models
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Random Forest · SVM · Neural Networks
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <p class="text-sm font-semibold text-slate-950">
+              Dataset
+            </p>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              ASHRAE RP-1043
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TAKEAWAYS -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+        >
+          Technical Takeaways
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+        >
+          Model selection is only one part of an engineering ML problem.
+        </h2>
+
+      </div>
+
+
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            01
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Multiple baselines matter
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Comparing different model families gives a more useful reference
+            than evaluating one classifier in isolation.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            02
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Domain knowledge helps
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Understanding how the physical system operates helps interpret
+            features and model behavior.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <p class="text-sm text-slate-400">
+            03
+          </p>
+
+          <h3 class="mt-3 font-semibold text-slate-950">
+            Deployment changes priorities
+          </h3>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            For real fault-detection systems, reliability and interpretability
+            can matter as much as predictive performance.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- BACK -->
+
+    <section
+      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-20 lg:px-8"
+    >
+
+      <div
+        class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between"
+      >
+
+        <div>
+
+          <p
+            class="text-sm uppercase tracking-[0.18em] text-slate-400"
+          >
+            Explore More
+          </p>
+
+          <h2
+            class="mt-3 text-2xl font-semibold text-slate-950"
+          >
+            More machine learning and engineering projects
+          </h2>
+
+        </div>
+
+
+        <a
+          href="/projects"
+          class="text-sm font-medium text-slate-900"
+        >
+          Back to all projects →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+
+</BaseLayout>
