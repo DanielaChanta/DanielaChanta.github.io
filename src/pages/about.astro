@@ -12,75 +12,90 @@ import Footer from "../components/Footer.astro";
 
   <main>
 
-    <!-- HEADER -->
+    <!-- ABOUT HEADER -->
 
-    <section
-      class="mx-auto max-w-6xl px-6 pb-20 pt-40 lg:px-8"
-    >
+<section
+  class="mx-auto max-w-6xl px-6 pb-20 pt-40 lg:px-8"
+>
 
-      <p
-        class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
-      >
-        About
-      </p>
+  <p
+    class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+  >
+    About
+  </p>
 
-      <div class="mt-5 grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
 
-        <div>
-
-          <h1
-            class="max-w-4xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl"
-          >
-            From electronic engineering to data science and applied AI.
-          </h1>
-
-          <div
-            class="mt-8 max-w-3xl space-y-6 text-lg leading-8 text-slate-600"
-          >
-
-            <p>
-              I am an electronic engineer from Peru currently pursuing an M2
-              in Data Science at École Polytechnique and a double engineering
-              degree at Télécom Paris.
-            </p>
-
-            <p>
-              My path into data science grew from working with signals,
-              sensors, computer vision and IoT systems. Over time, my work
-              evolved toward machine learning, statistical modeling, data
-              systems and AI-powered applications.
-            </p>
-
-            <p>
-              I am particularly interested in problems where data and machine
-              learning interact with real systems: from NLP and AI engineering
-              to streaming data, industrial applications and decision-support
-              tools.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="space-y-6">
-
-  <!-- PROFILE PHOTO -->
+  <!-- INTRO + PHOTO -->
 
   <div
-    class="overflow-hidden rounded-2xl border border-slate-200 bg-white"
+    class="mt-6 grid items-start gap-12 lg:grid-cols-[1.45fr_0.55fr]"
   >
-    <img
-      src="/images/daniela-profile.png"
-      alt="Daniela Chanta"
-      class="mx-auto aspect-[4/5] w-full max-w-sm object-cover"
-    />
+
+    <!-- TEXT -->
+
+    <div>
+
+      <h1
+        class="max-w-3xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl"
+      >
+        From electronic engineering to data science and applied AI.
+      </h1>
+
+
+      <div
+        class="mt-8 max-w-3xl space-y-5 text-base leading-8 text-slate-600"
+      >
+
+        <p>
+          I am an electronic engineer from Peru currently pursuing an M2
+          in Data Science at École Polytechnique and a double engineering
+          degree at Télécom Paris.
+        </p>
+
+        <p>
+          My path into data science grew from working with signals,
+          sensors, computer vision and IoT systems. Over time, my work
+          evolved toward machine learning, statistical modeling, data
+          systems and AI-powered applications.
+        </p>
+
+        <p>
+          I am particularly interested in problems where data and machine
+          learning interact with real systems: from NLP and AI engineering
+          to streaming data, industrial applications and decision-support
+          tools.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- PHOTO -->
+
+    <div class="flex justify-center lg:justify-end">
+
+      <div
+        class="w-full max-w-xs overflow-hidden rounded-2xl border border-slate-200 bg-white"
+      >
+
+        <img
+          src="/images/daniela-profile.png"
+          alt="Daniela Chanta"
+          class="aspect-[4/5] w-full object-cover"
+        />
+
+      </div>
+
+    </div>
+
   </div>
 
 
-  <!-- QUICK INFO -->
+  <!-- CURRENTLY -->
 
-  <aside
-    class="rounded-2xl border border-slate-200 bg-white p-8"
+  <div
+    class="mt-16 border-t border-slate-200 pt-10"
   >
 
     <p
@@ -89,62 +104,79 @@ import Footer from "../components/Footer.astro";
       Currently
     </p>
 
-    <div class="mt-6 space-y-6">
+
+    <div
+      class="mt-7 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
+    >
 
       <div>
+
         <p class="text-sm font-semibold text-slate-950">
           M2 Data Science
         </p>
 
-        <p class="mt-1 text-sm leading-6 text-slate-500">
-          École Polytechnique · Institut Polytechnique de Paris
+        <p class="mt-2 text-sm leading-6 text-slate-500">
+          École Polytechnique
         </p>
+
+        <p class="text-sm leading-6 text-slate-400">
+          Institut Polytechnique de Paris
+        </p>
+
       </div>
 
 
       <div>
+
         <p class="text-sm font-semibold text-slate-950">
           Diplôme d'Ingénieur
         </p>
 
-        <p class="mt-1 text-sm leading-6 text-slate-500">
-          Télécom Paris · Double Degree
+        <p class="mt-2 text-sm leading-6 text-slate-500">
+          Télécom Paris
         </p>
+
+        <p class="text-sm leading-6 text-slate-400">
+          Double Degree
+        </p>
+
       </div>
 
 
       <div>
+
         <p class="text-sm font-semibold text-slate-950">
           Based in
         </p>
 
-        <p class="mt-1 text-sm leading-6 text-slate-500">
+        <p class="mt-2 text-sm leading-6 text-slate-500">
           Île-de-France, France
         </p>
+
       </div>
 
 
       <div>
+
         <p class="text-sm font-semibold text-slate-950">
           Internship
         </p>
 
-        <p class="mt-1 text-sm leading-6 text-slate-500">
-          Available April 2027 · 6 months
+        <p class="mt-2 text-sm leading-6 text-slate-500">
+          Available April 2027
         </p>
+
+        <p class="text-sm leading-6 text-slate-400">
+          6 months
+        </p>
+
       </div>
 
     </div>
 
-  </aside>
+  </div>
 
-</div>
-
-
-
-      </div>
-
-    </section>
+</section>
 
 
     <!-- EDUCATION -->
