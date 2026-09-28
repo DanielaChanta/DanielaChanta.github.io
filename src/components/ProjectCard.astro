@@ -8,6 +8,7 @@ interface Props {
   technologies: string[];
   hasPage: boolean;
   metric?: string;
+  githubUrl?: string;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   technologies,
   hasPage,
   metric,
+  githubUrl,
 } = Astro.props;
 ---
 
@@ -86,7 +88,7 @@ const {
 
 
   {
-    hasPage && (
+    hasPage ? (
       <a
         href={`/projects/${slug}`}
         class="mt-8 inline-flex items-center text-sm font-medium text-slate-900 transition group-hover:translate-x-1"
@@ -94,7 +96,17 @@ const {
         View project
         <span class="ml-2">→</span>
       </a>
-    )
+    ) : githubUrl ? (
+      <a
+        href={githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-8 inline-flex items-center text-sm font-medium text-slate-900 transition group-hover:translate-x-1"
+      >
+        View repository
+        <span class="ml-2">→</span>
+      </a>
+    ) : null
   }
 
 </article>

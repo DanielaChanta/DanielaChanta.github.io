@@ -586,54 +586,166 @@ const technologies = [
     </section>
 
 
-    <!-- VISUAL PLACEHOLDER -->
+    <!-- PROJECT VISUALIZATION -->
 
-    <section
-      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+<section
+  class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+>
+
+  <div class="max-w-3xl">
+
+    <p
+      class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
+    >
+      Visualization
+    </p>
+
+    <h2
+      class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+    >
+      From 3D rooftop representation to structured geometric regions.
+    </h2>
+
+    <p class="mt-6 leading-8 text-slate-600">
+      The workflow transformed spatial information from the building model
+      into structured rooftop regions that could later be processed and used
+      by the photovoltaic panel-placement algorithm.
+    </p>
+
+  </div>
+
+
+  <div class="mt-14 grid gap-10 lg:grid-cols-2">
+
+    <!-- 3D MODEL -->
+
+    <figure>
+
+      <div
+        class="flex min-h-[360px] items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white p-5"
+      >
+
+        <img
+          src="/projects/solar-optimization/rooftop-3d-model.png"
+          alt="3D representation of the building and rooftop used for photovoltaic analysis"
+          class="max-h-[420px] w-auto max-w-full object-contain"
+        />
+
+      </div>
+
+      <figcaption
+        class="mt-4 text-sm leading-6 text-slate-500"
+      >
+        3D representation of the building environment used as the spatial
+        basis for rooftop analysis and photovoltaic layout evaluation.
+      </figcaption>
+
+    </figure>
+
+
+    <!-- BLOB PROCESSING -->
+
+    <figure>
+
+      <div
+        class="flex min-h-[360px] items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white p-5"
+      >
+
+        <img
+          src="/projects/solar-optimization/rooftop-blob-segmentation.png"
+          alt="Rooftop regions separated into blobs for geometric processing"
+          class="max-h-[420px] w-full object-contain"
+        />
+
+      </div>
+
+      <figcaption
+        class="mt-4 text-sm leading-6 text-slate-500"
+      >
+        Intermediate image-processing stage in which rooftop structures were
+        separated into connected regions, or blobs, to support subsequent
+        geometric analysis.
+      </figcaption>
+
+    </figure>
+
+  </div>
+
+
+  <!-- PIPELINE SUMMARY -->
+
+  <div
+    class="mt-14 rounded-2xl border border-slate-200 bg-white p-7 sm:p-8"
+  >
+
+    <p
+      class="text-xs font-medium uppercase tracking-[0.15em] text-slate-400"
+    >
+      Processing sequence
+    </p>
+
+    <div
+      class="mt-7 grid gap-4 text-sm lg:grid-cols-[1fr_auto_1fr_auto_1fr]"
     >
 
-      <div class="max-w-3xl">
+      <div class="rounded-xl bg-slate-50 p-5">
 
-        <p
-          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
-        >
-          Visualization
+        <p class="font-semibold text-slate-950">
+          3D representation
         </p>
 
-        <h2
-          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
-        >
-          From rooftop image to optimized panel layout.
-        </h2>
-
-        <p class="mt-6 leading-8 text-slate-600">
-          A visual example of the image-processing and panel-placement pipeline
-          will be included here.
+        <p class="mt-2 leading-6 text-slate-500">
+          Spatial model of the building and rooftop environment.
         </p>
 
       </div>
 
 
       <div
-        class="mt-12 flex min-h-[380px] items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white"
+        class="hidden items-center text-slate-300 lg:flex"
       >
+        →
+      </div>
 
-        <div class="max-w-sm px-8 text-center">
 
-          <p class="text-sm font-medium text-slate-700">
-            Rooftop analysis visualization
-          </p>
+      <div class="rounded-xl bg-slate-50 p-5">
 
-          <p class="mt-3 text-sm leading-6 text-slate-500">
-            Original image → detected roof region → optimized photovoltaic
-            layout.
-          </p>
+        <p class="font-semibold text-slate-950">
+          Region extraction
+        </p>
 
-        </div>
+        <p class="mt-2 leading-6 text-slate-500">
+          Rooftop geometry separated into processable connected regions.
+        </p>
 
       </div>
 
-    </section>
+
+      <div
+        class="hidden items-center text-slate-300 lg:flex"
+      >
+        →
+      </div>
+
+
+      <div class="rounded-xl bg-slate-50 p-5">
+
+        <p class="font-semibold text-slate-950">
+          Layout optimization
+        </p>
+
+        <p class="mt-2 leading-6 text-slate-500">
+          Structured geometry used to evaluate feasible photovoltaic panel
+          configurations.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
     <!-- TECH STACK -->

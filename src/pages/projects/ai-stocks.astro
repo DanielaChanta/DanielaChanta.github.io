@@ -236,8 +236,9 @@ const technologies = [
                 </h3>
 
                 <p class="mt-2 text-sm leading-7 text-slate-600">
-                  Generalized Supremum ADF testing was used to detect multiple
-                  episodes of explosive behavior within the same time series.
+                  Generalized Supremum ADF testing was used to test for the
+                  presence of explosive dynamics, while recursive BSADF
+                  statistics were used to identify and date individual episodes.
                 </p>
               </div>
 
@@ -654,52 +655,137 @@ const technologies = [
     </section>
 
 
-    <!-- VISUAL PLACEHOLDER -->
+    <!-- RESULTS VISUALIZATION -->
 
-    <section
-      class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+<section
+  class="mx-auto max-w-6xl border-t border-slate-200 px-6 py-24 lg:px-8"
+>
+
+  <div class="max-w-3xl">
+
+    <p
+      class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
     >
+      Results Visualization
+    </p>
 
-      <div class="max-w-3xl">
+    <h2
+      class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+    >
+      Portfolio performance, AI hype and speculative dynamics.
+    </h2>
 
-        <p
-          class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500"
-        >
-          Results Visualization
-        </p>
+    <p class="mt-6 leading-8 text-slate-600">
+      The analysis combined relative portfolio performance with public and
+      corporate AI-attention indicators, while the econometric methodology was
+      validated against the dot-com episode.
+    </p>
 
-        <h2
-          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
-        >
-          Portfolio performance and GSADF bubble periods.
-        </h2>
+  </div>
 
-        <p class="mt-6 leading-8 text-slate-600">
-          Final portfolio figures will be included here to show cumulative
-          performance, recursive GSADF statistics and identified speculative
-          periods.
-        </p>
 
-      </div>
+  <!-- RELATIVE PERFORMANCE -->
 
+  <figure class="mt-14">
+
+    <div
+      class="overflow-hidden rounded-2xl border border-slate-200 bg-white p-3 sm:p-5"
+    >
+      <img
+        src="/projects/ai-stocks/relative-performance.png"
+        alt="Relative performance of AI thematic portfolios compared with QQQ"
+        class="w-full"
+      />
+    </div>
+
+    <figcaption
+      class="mt-4 max-w-4xl text-sm leading-6 text-slate-500"
+    >
+      Relative performance of thematic AI portfolios against QQQ from 2018
+      onward. AI infrastructure, particularly the core infrastructure
+      portfolio, exhibits the strongest relative outperformance after 2023.
+    </figcaption>
+
+  </figure>
+
+
+  <!-- HYPE INDICATORS -->
+
+  <div class="mt-16 grid gap-10 lg:grid-cols-2">
+
+    <figure>
 
       <div
-        class="mt-12 flex min-h-[360px] items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white"
+        class="overflow-hidden rounded-2xl border border-slate-200 bg-white p-3"
       >
-        <div class="max-w-sm px-8 text-center">
-
-          <p class="text-sm font-medium text-slate-700">
-            Project visualization
-          </p>
-
-          <p class="mt-3 text-sm leading-6 text-slate-500">
-            Portfolio performance / GSADF figure will be added here.
-          </p>
-
-        </div>
+        <img
+          src="/projects/ai-stocks/public-hype-vs-performance.png"
+          alt="Public AI hype index compared with AI portfolio relative performance"
+          class="w-full"
+        />
       </div>
 
-    </section>
+      <figcaption
+        class="mt-4 text-sm leading-6 text-slate-500"
+      >
+        Public AI attention compared with relative AI-portfolio performance.
+        Both measures rise substantially during the recent AI investment cycle,
+        although their movements are not identical.
+      </figcaption>
+
+    </figure>
+
+
+    <figure>
+
+      <div
+        class="overflow-hidden rounded-2xl border border-slate-200 bg-white p-3"
+      >
+        <img
+          src="/projects/ai-stocks/corporate-hype-index.png"
+          alt="Corporate AI hype index constructed from SEC filings"
+          class="w-full"
+        />
+      </div>
+
+      <figcaption
+        class="mt-4 text-sm leading-6 text-slate-500"
+      >
+        Corporate AI Hype Index constructed from AI-related terminology in SEC
+        filings. Corporate discussion of AI increases markedly from 2023
+        onward.
+      </figcaption>
+
+    </figure>
+
+  </div>
+
+
+  <!-- HISTORICAL VALIDATION -->
+
+  <figure class="mt-16">
+
+    <div
+      class="overflow-hidden rounded-2xl border border-slate-200 bg-white p-3 sm:p-5"
+    >
+      <img
+        src="/projects/ai-stocks/dotcom-validation.png"
+        alt="BSADF validation on the NASDAQ versus S&P 500 during the dot-com bubble"
+        class="w-full"
+      />
+    </div>
+
+    <figcaption
+      class="mt-4 max-w-4xl text-sm leading-6 text-slate-500"
+    >
+      Historical validation using the NASDAQ Composite relative to the S&P 500.
+      The BSADF statistic rises above the critical values around the dot-com
+      bubble and peaks close to the March 2000 NASDAQ market peak.
+    </figcaption>
+
+  </figure>
+
+</section>
 
 
     <!-- VALIDATION -->

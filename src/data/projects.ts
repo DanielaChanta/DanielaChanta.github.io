@@ -8,6 +8,7 @@ export interface Project {
   featured: boolean;
   hasPage: boolean;
   metric?: string;
+  githubUrl?: string;
 }
 
 export const projects: Project[] = [
@@ -98,6 +99,27 @@ export const projects: Project[] = [
     ],
     featured: false,
     hasPage: true,
+  },
+
+  {
+    title: "Hugging Face Dataset Visibility & Market Concentration",
+    slug: "hugging-face-market-concentration",
+    category: "Data Analysis · Web Scraping · Digital Markets",
+    year: "2026",
+    description:
+      "Group project analyzing attention concentration in the Hugging Face dataset ecosystem using a visibility-based sample collected from platform discovery rankings.",
+    technologies: [
+      "Python",
+      "BeautifulSoup",
+      "Web Scraping",
+      "Pandas",
+      "Data Analysis",
+      "Digital Markets",
+    ],
+    featured: false,
+    hasPage: false,
+    githubUrl:
+      "https://github.com/DanielaChanta/hugging-face-datasets-winner-takes-all",
   },
 
   {
